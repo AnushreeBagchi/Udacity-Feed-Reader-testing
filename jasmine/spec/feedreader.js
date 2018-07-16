@@ -31,7 +31,7 @@ $(function() {
         it ('URL defined', function (){
             allFeeds.forEach(element => {
                expect(element.url).toBeDefined(); 
-               expect(element.url).not.toBe(0);
+               expect(element.url).not.toBe('');
             });
 
         });
@@ -43,7 +43,7 @@ $(function() {
         it('name defined',function (){
             allFeeds.forEach(element=> {
                 expect(element.name).toBeDefined();
-                expect(element.name).not.toBe(0);
+                expect(element.name).not.toBe('');
             });
         });
 
