@@ -78,13 +78,13 @@ $(function() {
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          */
-        beforeEach(function(done){
+        beforeEach (function(done){
             loadFeed(0,done);  
         });
         it('have entry',function(){
             expect($('.feed .entry').length).toBeGreaterThan(0);
         });
-    });
+    }) ;
     /* Test suite named "New Feed Selection" */
     describe('New Feed Selection',function(){
         var initialEntry;
@@ -96,12 +96,12 @@ $(function() {
             loadFeed(0,function(){
                 initialEntry=$('.feed').html();
                 loadFeed(1,done);
-            })
+            });
         });
 
         it('new feeds loaded',function(){
             var newEntry=$('.feed').html();
             expect(newEntry).not.toBe(initialEntry);
         });
-    })
+    });
 }());
